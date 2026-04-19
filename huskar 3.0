@@ -1,0 +1,325 @@
+propusk = 1
+slovar = {'key1': 'Ваш результат: '}
+ACID_GREEN = '\033[38;2;0;255;0m'
+a = 0
+cikl = True
+import time
+h = 1
+for i in range (5):
+    
+    a = print (ACID_GREEN + "Загрузка пакетов... (------------------------------------------------)")
+    
+    
+    time.sleep (0.1)
+for i in range (4):
+
+    a = print (ACID_GREEN+"Подкачка данных из открытых источников... (--------------------------------------------------)")
+
+    time.sleep (0.5)
+for i in range (6):
+    a = print (ACID_GREEN+"Подкачка данных из открытых источников... (--------------------------------------------------)")
+    time.sleep (0.05)
+print(ACID_GREEN +"_______________________________________________________________________________________________________________________________________\n|    ___________      ___________       ____________       ____________     __________     ___________   _____________   \\         /  |\n|   |                |                 |            |     |                |__      __|   |                    |          \\       /   |\n|   |                |                 |            |     |                   |    |      |                    |           \\     /    |\n|   |                |                 |            |     |                   |    |      |                    |            \\   /     |\n|   |                |                 |            |     |                   |    |      |                    |             \\ /      |\n|   |___________     |                 |            |     |                   |    |      |                    |              |       |\n|   |                |___________      |            |     |                   |    |      |___________         |              |       |\n|   |                            |     |            |     |                   |    |      |                    |              |       |\n|   |                            |     |            |     |                   |    |      |                    |              |       |\n|   |                            |     |            |     |                   |    |      |                    |              |       |\n|   |                            |     |            |     |                   |    |      |                    |              |       |\n|   |                            |     |            |     |                 __|    |__    |                    |              |       |\n|   |                ____________|     |____________|     |____________    |__________|   |___________         |              |       |\n|_____________________________________________________________________________________________________________________________________|")
+while cikl == True:
+    userdata1 = input("Что вас интересует? \n 1-Температура     2-вес (мб,гб)     3-встроенный калькулятор      \nВведите число: ")
+    kortezh = (1,2,3)
+    try:
+        userdata1 = int(userdata1)
+        if userdata1 not in kortezh:
+            raise ValueError() #тут тип новая темка для меня
+    except ValueError:
+        print("ыхыхыхых умник оч смешно, в следующий раз делай по инструкции")
+
+    match userdata1:
+        case 1:
+            userdata2 = input("1-Градусы цельсия в фарингейты       2-Фарингейты в градусы цельсия      \nВведите число: ")
+            kortezh = (1,2)
+            try:
+                userdata2 = int(userdata2)
+                if userdata2 not in kortezh:
+                    raise ValueError ()
+            except ValueError:
+                print ("хахаха, давай по новой, по инструкции")
+            
+            match userdata2:
+                case 1:
+                    def num1 (userdata3): 
+                        return userdata3 * 9/5 +32
+                    def num2 (userdata4): 
+                        return (userdata4 - 32) * 5/9
+                    userdata3 = float(input("Введите температуру которую нужно преобразовать в фарингейты: \n"))
+                    result = num1 (userdata3)
+                    print (f'Ваш результат в фарингейтах:  {result}')
+                case 2:
+                    def num1 (userdata3):
+                        return userdata3 * 9/5 +32
+                    def num2 (userdata4): 
+                        return (userdata4 - 32) * 5/9
+                    userdata4 = float(input("Введите градусы в фарингейтах которые нужно преобразовать: \n"))
+                    result = num2 (userdata4)
+                    print (f'Ваш результат в цельсия:   {result}')
+        case 2:
+
+            b = ('биты','байты', 'килобайты', 'мегабайты', 'гигабайты', 'терабайты', 'петабайты', 'эксабайты', 'в')
+            userdata5 =float(input('Введи вес: '))
+            userdata6 =str(input("Что вы хотите сделать?: "))
+            userdata6 = userdata6.lower ().split ( )
+            a = 0
+            if len(userdata6) == 3:# тут магия len запомни
+                if userdata6[0] in b:
+                    if userdata6[1] in b:
+                        if userdata6[2] in b:
+                            a +=3
+            if a < 3:
+                print ("Ошибка! В следующий раз введите например: биты в байты.")
+
+
+            userdata6 = " ".join (userdata6)
+
+
+
+            slovar = {
+                'g1':
+                userdata5*1024,
+                'g2':
+                userdata5*1024*1024,
+                'g3':
+                userdata5*1024*1024*1024,
+                'g4':
+                userdata5*1024*1024*1024*1024,
+                'g5':
+                userdata5*1024*1024*1024*1024*1024,
+
+                'g5_5':
+                userdata5*8,
+                'g6':
+                userdata5*1024*8,
+                'g7':
+                userdata5*8*1024*1024,
+                'g8':
+                userdata5*8*1024*1024*1024,
+                'g9':
+                userdata5*8*1024*1024*1024*1024,
+                'g10':
+                userdata5*8*1024*1024*1024*1024*1024,
+
+                'g11':
+                userdata5/8,
+                'g12':
+                userdata5/1024/8,
+                'g13':
+                userdata5/1024/1024/8,
+                'g14':
+                userdata5/1024/1024/1024/8,
+                'g15':
+                userdata5/1024/1024/1024/1024/8,
+                'g16':
+                userdata5/1024/1024/1024/1024/1024/8,
+                'g16_1':
+                userdata5/1024/1024/1024/1024/1024/1024/8,
+
+                'g17':
+                userdata5/1024,
+                'g18':
+                userdata5/1024/1024,
+                'g19':
+                userdata5/1024/1024/1024,
+                'g20':
+                userdata5/1024/1024/1024/1024,
+                'g21':
+                userdata5/1024/1024/1024/1024/1024,
+                'g21_1':
+                userdata5/1024/1024/1024/1024/1024/1024
+                }
+            match userdata6:
+                case "биты в байты":
+                    print (f'{slovar['g11']:.5f}')
+                case "биты в килобайты":
+                    print (f'{slovar['g12']:.5f}')
+                case "биты в мегабайты":
+                    print (f'{slovar['g13']:.5f}')
+                case "биты в гигабайты":
+                    print (f'{slovar['g14']:.5f}')
+                case "биты в терабайты":
+                    print (f'{slovar['g15']:.5f}')
+                case "биты в петабайты":
+                    print (f'{slovar['g16']:.5f}')
+                case "биты в эксабайты":
+                    print (f'{slovar['g16_1']:.5f}')
+
+                case "байты в биты":
+                    print (f'{slovar['g5_5']:.5f}')
+                case "байты в килобайты":
+                    print (f'{slovar['g17']:.5f}')
+                case "байты в мегабайты":
+                    print (f'{slovar['g18']:.5f}')
+                case "байты в гигабайты":
+                    print (f'{slovar['g19']:.5f}')
+                case "байты в терабайты":
+                    print (f'{slovar['g20']:.5f}')
+                case "байты в петабайты":
+                    print (f'{slovar['g21']:.5f}')
+                case "байты в эксабайты":
+                    print (f'{slovar['g21_1']:.5f}')
+
+                case "килобайты в биты":
+                    print (f'{slovar['g6']:.5f}')
+                case "килобайты в байты":
+                    print (f'{slovar['g1']:.5f}')
+                case "килобайты в мегабайты":
+                    print (f'{slovar['g17']:.5f}')
+                case "килобайты в гигабайты":
+                    print (f'{slovar['g18']:.5f}')
+                case "килобайты в терабайты":
+                    print (f'{slovar['g19']:.5f}')
+                case "килобайты в петабайты":
+                    print (f'{slovar['g20']:.5f}')
+                case "килобайты в эксабайты":
+                    print (f'{slovar['g21']:.5f}')
+
+                case "мегабайты в биты":
+                    print (f'{slovar['g7']:.5f}')
+                case "мегабайты в байты":
+                    print (f'{slovar['g2']:.5f}')
+                case "мегабайты в килобайты":
+                    print (f'{slovar['g1']:.5f}')
+                case "мегабайты в гигабайты":
+                    print (f'{slovar['g17']:.5f}')
+                case "мегабайты в терабайты":
+                    print (f'{slovar['g18']:.5f}')
+                case "мегабайты в петабайты":
+                    print (f'{slovar['g19']:.5f}')
+                case "мегабайты в эксабайты":
+                    print (f'{slovar['g20']:.5f}')
+
+                case "гигабайты в биты":
+                    print (f'{slovar['g8']:.5f}')
+                case "гигабайты в байты":
+                    print (f'{slovar['g3']:.5f}')
+                case "гигабайты в килобайты":
+                    print (f'{slovar['g2']:.5f}')
+                case "гигабайты в мегабайты":
+                    print (f'{slovar['g1']:.5f}')
+                case "гигабайты в терабайты":
+                    print (f'{slovar['g17']:.5f}')
+                case "гигабайты в петабайты":
+                    print (f'{slovar['g18']:.5f}')
+                case "гигабайты в эксабайты":
+                    print (f'{slovar['g19']:.5f}')
+
+                case "терабайты в биты":
+                    print (f'{slovar['g9']:.5f}')
+                case "терабайты в байты":
+                    print (f'{slovar['g4']:.5f}')
+                case "терабайты в килобайты":
+                    print (f'{slovar['g3']:.5f}')
+                case "терабайты в мегабайты":
+                    print (f'{slovar['g2']:.5f}')
+                case "терабайты в гигабайты":
+                    print (f'{slovar['g1']:.5f}')
+                case "терабайты в петабайты":
+                    print (f'{slovar['g17']:.5f}')
+                case "терабайты в эксабайты":
+                    print (f'{slovar['g18']:.5f}')
+
+                case "петабайты в биты":
+                    print (f'{slovar['g10']:.5f}')
+                case "петабайты в байты":
+                    print (f'{slovar['g5']:.5f}')
+                case "петабайты в килобайты":
+                    print (f'{slovar['g4']:.5f}')
+                case "петабайты в мегабайты":
+                    print (f'{slovar['g3']:.5f}')
+                case "петабайты гигабайты":
+                    print (f'{slovar['g2']:.5f}')
+                case "петабайты в терабайты":
+                    print (f'{slovar['g1']:.5f}')
+                case "петабайты в эксабайты":
+                    print (f'{slovar['g17']:.5f}')
+
+                case "эксабайты в биты":
+                    print (f'{slovar['g11']:.5f}')
+                case "эксабайты в байты":
+                    print (f'{slovar['g6']:.5f}')
+                case "эксабайты в килобайты":
+                    print (f'{slovar['g5']:.5f}')
+                case "эксабайты в мегабайты":
+                    print (f'{slovar['g4']:.5f}')
+                case "эксабайты в гигабайты":
+                    print (f'{slovar['g3']:.5f}')
+                case "эксабайты в терабайты":
+                    print (f'{slovar['g2']:.5f}')
+                case "эксабайты в петабайты":
+                    print (f'{slovar['g1']:.5f}')
+                case _:
+                    print ("")
+    match userdata1:
+        case 3:
+            numbers = {'key1':"Вводите число: \n"}
+            def plus (l,l1): return l+l1
+            def minus (l,l1): return l-l1
+            def umnozh (l,l1): return l*l1
+            def stepen (l,l1): return l**l1
+            def delen (l,l1): return l/l1
+            def delenBS (l,l1): return l//l1
+            def userdata10 ():# создал чёрный ящик из него выходят значения l1=1;l=1;k = + ,либо none none none
+                try:# начинается обработка ошибок здесь
+                    l = float(input(numbers['key1']))
+                    k = input("Введите знак: \n").strip
+                    l1 = float(input(numbers['key1']))
+                    if k in ["/","//"] and l1 == 0:
+                        raise ZeroDivisionError ()
+                    return l,k,l1#если всё что выше прошло без ошибок то юзер дата10 = тому что пользователь указал выше
+                except ValueError:
+                    print ("Проверка продолжается? если да то наставник заметь пж! а так, в след. раз введи цифру и знак.")
+                    return None, None, None #
+                except ZeroDivisionError:
+                    print("Ошибка! На 0 делить нельзя!") # НАСТАВНИК ЕСЛИ ВЫ ЭТО ЧИТАЕТЕ ЗНАЙТЕ ЧТО МНЕ ПРИШЛОСЬ РАЗБИРАТЬСЯ В TRY/EXCEPT, А ЕЩЁ В ТАКИХ ШТУКАХ КАК .JOIN, RAIS VALUEERROR ИТД ТАК ЧТО ПРОШУ ХОТЯ БЫ ПОХВАЛИТЕ МЕНЯ ПЖ Я ПРАВДА ОЧЕНЬ СТАРАЛСЯ НА ПРОТЯЖЕНИИ ЦЕЛОЙ НЕДЕЛИ!")
+                    return None,None,None #что бы дальше точно не пошло
+            l, k, l1 = userdata10()
+            if l is not None:
+                match k:
+                    case "+" : 
+                        g = plus (l,l1)
+                        print (g)
+
+                    case "-":
+                        g= minus (l,l1)
+                        print (g)
+
+                    case "*" :  
+                        g= umnozh(l,l1)
+                        print (g)
+
+                    case "**" :
+                        g= stepen (l,l1)
+                        print (g)
+
+                    case "/": 
+                        g = delen (l,l1)
+                        print (g)
+                            
+                    case "//": 
+                        g = delenBS (l,l1)
+                        print (g) 
+                    case _:
+                        print ("ыхыхых знак не тот")
+    userdata7 = str(input("Продолжаем?: Д/н\n"))
+    userdata7 = userdata7.lower ()
+    if userdata7 in ("д" , "да" ,"y", "yes"):
+        cikl = True
+    elif userdata7 in ("н" , "нет", 'n', "no"):
+        cikl = False
+    else:
+        print("Неверный ввод. Введите: д/да или н/нет.")
+        cikl = False
+
+
+
+
+
+
+
+
+
+    
